@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bbac51fc40d7e07e096a83ab79618fb0",
-    "content-hash": "6f6469c659bafce440a3c4404eb04048",
+    "hash": "6ee98ae3ec770146e9efdb922d4bf2af",
+    "content-hash": "72bff7c3bed4ecb6595a196683389cf4",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -773,6 +773,87 @@
                 "orm"
             ],
             "time": "2016-01-05 21:34:58"
+        },
+        {
+            "name": "elnur/database-bundle",
+            "version": "v1.1.0",
+            "target-dir": "Elnur/DatabaseBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elnur/ElnurDatabaseBundle.git",
+                "reference": "63e3bdcc165666d90ba44217c7397581a791ad1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elnur/ElnurDatabaseBundle/zipball/63e3bdcc165666d90ba44217c7397581a791ad1b",
+                "reference": "63e3bdcc165666d90ba44217c7397581a791ad1b",
+                "shasum": ""
+            },
+            "require": {
+                "elnur/database-migrations": "^0.3",
+                "php": ">=5.3.2",
+                "symfony/console": "~2.0|~3.0",
+                "symfony/framework-bundle": "~2.0|~3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Elnur\\DatabaseBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elnur Abdurrakhimov",
+                    "email": "elnur@elnur.pro",
+                    "homepage": "http://www.elnur.pro"
+                }
+            ],
+            "description": "Some things to help working with databases",
+            "keywords": [
+                "database",
+                "migrations"
+            ],
+            "time": "2016-03-31 17:53:15"
+        },
+        {
+            "name": "elnur/database-migrations",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elnur/database-migrations.git",
+                "reference": "9a6a2798513c90d87c956d1604dfffb01b8e35d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elnur/database-migrations/zipball/9a6a2798513c90d87c956d1604dfffb01b8e35d8",
+                "reference": "9a6a2798513c90d87c956d1604dfffb01b8e35d8",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elnur Abdurrakhimov",
+                    "email": "elnur@elnur.pro"
+                }
+            ],
+            "description": "Plain SQL migrations",
+            "time": "2016-04-01 08:03:42"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2065,8 +2146,5 @@
     "platform": {
         "php": ">=5.5.9"
     },
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "5.5.9"
-    }
+    "platform-dev": []
 }

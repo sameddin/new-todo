@@ -1,0 +1,6 @@
+CREATE TABLE todo
+(
+  id BIGSERIAL NOT NULL,
+
+  PRIMARY KEY (id)
+);
