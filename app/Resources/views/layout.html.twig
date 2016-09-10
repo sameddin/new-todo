@@ -3,6 +3,7 @@
 {% block stylesheets %}
     {% stylesheets '@css' %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
+        <script src="https://use.fontawesome.com/1fd1821b57.js"></script>
     {% endstylesheets %}
 {% endblock %}
 
@@ -46,7 +47,7 @@
             <p>This is awesome New ToDo list.<br>
                 If you want your own tasks, just tap on the button below and register for free.
             </p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Register &raquo;</a></p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Register <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a></p>
         </div>
     </div>
 
@@ -56,7 +57,7 @@
         <hr>
 
         <footer>
-            <p>&copy; 2016  New ToDo. Created & Designed by <a href="http://sameddin.pro/" target="_blank">Sameddin</a>.</p>
+            <p><i class="fa fa-copyright" aria-hidden="true"></i> 2016  New ToDo. Created & Designed by <a href="http://sameddin.pro/" target="_blank">Sameddin</a>.</p>
         </footer>
     </div>
 {% endblock %}
