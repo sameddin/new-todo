@@ -1,0 +1,1 @@
+dropdb todo && createdb todo -O todo && bin/console e:d:m
