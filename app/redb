@@ -1,1 +1,1 @@
-dropdb todo && createdb todo -O todo && bin/console e:d:m
+dropdb todo && createdb todo -O todo && bin/console e:d:m && bin/console h:d:f:l -n
