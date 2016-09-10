@@ -36,6 +36,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
 
 # Assetic Configuration
 assetic:
@@ -44,6 +46,15 @@ assetic:
     bundles: {  }
     filters:
         cssrewrite: ~
+
+    assets:
+        css:
+            inputs:
+                - %kernel.root_dir%/../bower_components/bootstrap/dist/css/bootstrap.min.css
+        js:
+            inputs:
+                - %kernel.root_dir%/../bower_components/jquery/dist/jquery.min.js
+                - %kernel.root_dir%/../bower_components/bootstrap/dist/js/bootstrap.min.js
 
 # Doctrine Configuration
 doctrine:
