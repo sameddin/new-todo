@@ -6,4 +6,9 @@ common.created_designed: Created & Designed by
 common.hello_world: Hello, world!
 common.jumbotron_text_one: This is awesome New ToDo list.
 common.jumbotron_text_two: If you want your own tasks, just tap on the button below and register for free.
+common.jumbotron_text_three: This is an example form.
+common.jumbotron_text_four: Here you can add/edit/delete tasks.
 common.example: Example
+common.task: Task
+common.task.placeholder: Enter your task
+common.submit: Submit

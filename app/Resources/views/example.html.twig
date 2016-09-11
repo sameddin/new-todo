@@ -1,6 +1,19 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{ 'common.jumbotron_text_three'|trans }}</h1>
+            <p>{{ 'common.jumbotron_text_four'|trans }}<br>
+                {{ 'common.jumbotron_text_two'|trans }}
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">{{ 'common.register'|trans }} <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a></p>
+        </div>
+    </div>
+
     <div class="col-xs-8 col-sm-8">
+
+        {{ form(form) }}
+
         {% for todo_list in tasks %}
             <ul class="list-group">
                 <li class="list-group-item">{{ todo_list.task }}</li>
