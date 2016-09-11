@@ -46,6 +46,8 @@ class ExampleController extends Controller
         $em->persist($task);
         $em->flush();
 
+        $this->addFlash('success', 'task_add.success');
+
         return $this->redirectToRoute('example');
     }
 }

@@ -12,3 +12,4 @@ common.example: Example
 common.task: Task
 common.task.placeholder: Enter your task
 common.submit: Submit
+task_add.success: Task was added successfully!
