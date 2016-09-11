@@ -15,14 +15,31 @@
 
         {{ form(form) }}
 
-        {% for todo_list in tasks %}
-            <ul class="list-group">
-                <li class="list-group-item">
-                    {{ todo_list.task }}
-                    <a href="{{ path('task.delete', {id: todo_list.id }) }}" class="btn btn-danger btn-xs" role="button">
-                        <i class="fa fa-trash-o fa-lg"></i> {{ 'common.delete'|trans }}</a>
-                </li>
-            </ul>
-        {% endfor %}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>{{ 'common.task'|trans }}</th>
+                    <th>{{ 'common.actions'|trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for todo_list in tasks %}
+                <tr>
+                    <td>{{ todo_list.id }}</td>
+                    <td>{{ todo_list.task }}</td>
+                    <td>
+                        <a class="btn btn-xs btn-danger" href="{{ path('task.delete', {'id': todo_list.id}) }}">
+                            {{ 'common.delete'|trans }}
+                        </a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3" class="text-center text-muted">{{ 'tasks.empty_list'|trans }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}

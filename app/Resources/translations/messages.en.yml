@@ -15,3 +15,5 @@ common.submit: Submit
 task_add.success: Task was added successfully!
 task_delete.success: Task was deleted successfully!
 common.delete: Delete
+common.actions: Actions
+tasks.empty_list: No tasks were found.
