@@ -17,3 +17,7 @@ task_delete.success: Task was deleted successfully!
 common.delete: Delete
 common.actions: Actions
 tasks.empty_list: No tasks were found.
+task_edit.success: Task was edited successfully!
+common.edit: Edit
+common.jumbotron_text_five: This is an example form of Task edition.
+common.jumbotron_text_six: In this form you can edit task or leave it as it is.

@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            <h2>{{ 'common.jumbotron_text_five'|trans }}</h2>
+            <p>{{ 'common.jumbotron_text_six'|trans }}<br>
+                {{ 'common.jumbotron_text_two'|trans }}
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">{{ 'common.register'|trans }} <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a></p>
+        </div>
+    </div>
+
+    <div class="col-xs-8 col-sm-8">
+        {{ form(form) }}
+    </div>
+{% endblock %}

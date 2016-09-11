@@ -3,10 +3,12 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\TodoList;
 use AppBundle\Form\Type\TodoListAddType;
+use AppBundle\Form\Type\TodoListEditType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ExampleController extends Controller
 {
@@ -65,5 +67,31 @@ class ExampleController extends Controller
         $this->addFlash('success', 'task_delete.success');
 
         return $this->redirectToRoute('example');
+    }
+
+    /**
+     * @Route("/example/edit/{id}", name="task.edit")
+     * @param Request $request
+     * @param TodoList $task
+     * @return RedirectResponse|Response
+     */
+    public function editAction(Request $request, TodoList $task)
+    {
+        $form = $this->createForm(TodoListEditType::class, $task);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($task);
+            $em->flush();
+
+            $this->addFlash('success', 'task_edit.success');
+
+            return $this->redirectToRoute('example');
+        }
+
+        return $this->render('example_edit.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 }
