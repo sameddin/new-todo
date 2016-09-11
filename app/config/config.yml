@@ -50,11 +50,11 @@ assetic:
     assets:
         css:
             inputs:
-                - %kernel.root_dir%/../bower_components/bootstrap/dist/css/bootstrap.min.css
+                - "%kernel.root_dir%/../bower_components/bootstrap/dist/css/bootstrap.min.css"
         js:
             inputs:
-                - %kernel.root_dir%/../bower_components/jquery/dist/jquery.min.js
-                - %kernel.root_dir%/../bower_components/bootstrap/dist/js/bootstrap.min.js
+                - "%kernel.root_dir%/../bower_components/jquery/dist/jquery.min.js"
+                - "%kernel.root_dir%/../bower_components/bootstrap/dist/js/bootstrap.min.js"
 
 # Doctrine Configuration
 doctrine:
