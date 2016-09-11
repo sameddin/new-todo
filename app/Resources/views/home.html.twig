@@ -1,2 +1,12 @@
 {% extends 'layout.html.twig' %}
-{% block content %}{% endblock %}
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{ 'common.hello_world'|trans }}</h1>
+            <p>{{ 'common.jumbotron_text_one'|trans }}<br>
+                {{ 'common.jumbotron_text_two'|trans }}
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">{{ 'common.register'|trans }} <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a></p>
+        </div>
+    </div>
+{% endblock %}
