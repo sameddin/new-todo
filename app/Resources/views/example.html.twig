@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <div class="col-xs-8 col-sm-8">
+        {% for todo_list in tasks %}
+            <ul class="list-group">
+                <li class="list-group-item">{{ todo_list.task }}</li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}
