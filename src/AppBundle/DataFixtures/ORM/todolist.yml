@@ -1,0 +1,3 @@
+AppBundle\Entity\TodoList:
+    todo_list_{1..10}:
+        task: <sentence($nbWords = 6, $variableNbWords = true)>
