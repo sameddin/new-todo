@@ -17,7 +17,11 @@
 
         {% for todo_list in tasks %}
             <ul class="list-group">
-                <li class="list-group-item">{{ todo_list.task }}</li>
+                <li class="list-group-item">
+                    {{ todo_list.task }}
+                    <a href="{{ path('task.delete', {id: todo_list.id }) }}" class="btn btn-danger btn-xs" role="button">
+                        <i class="fa fa-trash-o fa-lg"></i> {{ 'common.delete'|trans }}</a>
+                </li>
             </ul>
         {% endfor %}
     </div>

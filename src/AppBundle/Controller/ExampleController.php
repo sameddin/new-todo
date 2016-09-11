@@ -50,4 +50,20 @@ class ExampleController extends Controller
 
         return $this->redirectToRoute('example');
     }
+
+    /**
+     * @Route("/example/delete/{id}", name="task.delete")
+     * @param TodoList $task
+     * @return RedirectResponse
+     */
+    public function deleteAction(TodoList $task)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($task);
+        $em->flush();
+
+        $this->addFlash('success', 'task_delete.success');
+
+        return $this->redirectToRoute('example');
+    }
 }
