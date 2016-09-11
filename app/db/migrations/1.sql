@@ -1,10 +1,3 @@
-CREATE TABLE todo
-(
-  id BIGSERIAL NOT NULL,
-
-  PRIMARY KEY (id)
-);
-
 CREATE TABLE todo_list
 (
   id   BIGSERIAL NOT NULL,
