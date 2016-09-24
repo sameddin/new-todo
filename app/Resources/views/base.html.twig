@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sameddin">
+    <meta name="keywords" content="Sameddin, PHP, Symfony, To-Do, ToDo, To-Do List, ToDo List">
+    <meta name="description" content="My awesome new ToDo list.">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <title>{% block title %}{{ 'common.project_name'|trans }}{% endblock %}</title>
+
+    <meta content="{{ asset('favicon/apple-icon.png') }}" property="og:image">
+    <meta content="image/png" property="og:image:type">
+    <meta content="192" property="og:image:width">
+    <meta content="192" property="og:image:height">
+    <meta content="New ToDo" property="og:site_name"/>
+    <meta content="Created To Do it!" property="og:title"/>
+    <meta content="http://46.101.216.113/" property="og:url"/>
+    <meta content="My awesome new ToDo list." property="og:description"/>
 
     {% block stylesheets %}{% endblock %}
 
