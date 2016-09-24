@@ -31,7 +31,8 @@ class TodoListEditType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'AppBundle\Entity\TodoList',
+            'data_class'      => 'AppBundle\Entity\TodoList',
+            'csrf_protection' => false,
         ]);
     }
 }
