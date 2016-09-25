@@ -1,7 +1,7 @@
 CREATE TABLE todo_list
 (
-  id   BIGSERIAL NOT NULL,
-  task VARCHAR,
+  id   bigserial NOT NULL,
+  task varchar,
 
   PRIMARY KEY (id)
 );
