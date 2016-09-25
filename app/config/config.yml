@@ -51,6 +51,7 @@ assetic:
         css:
             inputs:
                 - "%kernel.root_dir%/../bower_components/bootstrap/dist/css/bootstrap.min.css"
+                - "%kernel.root_dir%/../app/Resources/assets/css/signin.css"
         js:
             inputs:
                 - "%kernel.root_dir%/../bower_components/jquery/dist/jquery.min.js"
