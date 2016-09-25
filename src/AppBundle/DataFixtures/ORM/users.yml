@@ -1,0 +1,9 @@
+AppBundle\Entity\User:
+    user1:
+        nickName: sameddin
+        email: sameddin.pasizade@gmail.com
+        password: password
+    user{2..20}:
+        nickName: <userName()>
+        email: <email()>
+        password: <password()>
