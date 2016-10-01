@@ -7,6 +7,12 @@
 {% block content %}
     <body class="sign-in">
         <div class="container">
+
+            <ol class="breadcrumb">
+                <li><a href="{{ path('homepage') }}">{{ 'common.project_name'|trans }}</a></li>
+                <li class="active">Sign in</li>
+            </ol>
+
             {% if error %}
                 <div class="alert alert-danger">
                     {{ error.messageKey|trans(error.messageData, 'security') }}
