@@ -21,3 +21,6 @@ task_edit.success: Task was edited successfully!
 common.edit: Edit
 common.jumbotron_text_five: This is an example form of Task edition.
 common.jumbotron_text_six: In this form you can edit task or leave it as it is.
+common.email: Email
+common.password: Password
+common.please_sign_in: Please sign in
