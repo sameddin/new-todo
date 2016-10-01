@@ -44,3 +44,8 @@ body.sign-in {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.new-account {
+    display: block;
+    margin-top: 10px;
+}
