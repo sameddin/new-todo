@@ -17,7 +17,7 @@
 
             <ol class="breadcrumb">
                 <li><a href="{{ path('homepage') }}">{{ 'common.project_name'|trans }}</a></li>
-                <li class="active">Sign in</li>
+                <li class="active">{{ 'common.sign_in'|trans }}</li>
             </ol>
 
             {% if error %}
@@ -43,7 +43,7 @@
                     <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_in'|trans }}</button>
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Create an account</a>
+            <a href="#" class="text-center new-account">{{ 'common.create_account'|trans }}</a>
         </div>
     </body>
 {% endblock %}
