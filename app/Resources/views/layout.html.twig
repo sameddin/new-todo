@@ -31,7 +31,7 @@
                     <li><a href="{{ path('example') }}">{{ 'common.example'|trans }}</a></li>
                 </ul>
 
-                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                {% if is_granted(expression('is_authenticated()')) %}
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="btn btn-link" href="{{ logout_url('main') }}" role="button">{{ 'common.sign_out'|trans }}</a></li>
                     </ul>
