@@ -43,6 +43,7 @@
                         <div class="form-group">
                             <input type="password" id="password" name="password" class="form-control" placeholder="{{ 'common.password'|trans }}" />
                         </div>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                         <button type="submit" class="btn btn-success">{{ 'common.sign_in'|trans }}</button>
                     </form>
                 {% endif %}

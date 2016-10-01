@@ -33,6 +33,7 @@ security:
                 username_parameter: email
                 password_parameter: password
                 provider: doctrine
+                csrf_parameter: _csrf_security_token
 
             logout:
                 path:   /logout
