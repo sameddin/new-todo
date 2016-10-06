@@ -28,3 +28,4 @@ common.password_repeat: Repeat Password
 common.please_sign_in: Please sign in
 common.create_account: Create an account
 common.username: Username
+common.already_have_an_account: Already have an account?

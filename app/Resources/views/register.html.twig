@@ -34,6 +34,9 @@
                     {{ form_widget(form.plainPassword.second) }}
                     <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_up'|trans }}</button>
                 </div>
+                <div>
+                    <p class="text-center new-account">{{ 'common.already_have_an_account'|trans }} <a href="{{ path('login') }}">{{ 'common.sign_in'|trans }}</a>.</p>
+                </div>
             {{ form_end(form) }}
         </div>
     </body>
