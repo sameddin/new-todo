@@ -13,38 +13,43 @@
 
 {% block content %}
     <body class="sign-in">
-        <div class="container">
-
-            <ol class="breadcrumb">
-                <li><a href="{{ path('homepage') }}">{{ 'common.project_name'|trans }}</a></li>
-                <li class="active">{{ 'common.sign_in'|trans }}</li>
-            </ol>
-
-            {% if error %}
+    <div class="container">
+        <div class="row">
+            <div class="form-signin center-block">
+                <a href="{{ path('homepage') }}">
+                    <img class="profile-img" src="{{ asset('favicon/favicon-96x96.png') }}">
+                </a>
+                <h2 class="form-signin-heading text-center">{{ 'common.sign_in_new_todo'|trans }}</h2>
+            </div>
+        </div>
+        {% if error %}
+            <div class="form-signin">
                 <div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </span>
+                            <span aria-hidden="true">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </span>
                     </button>
                     <strong>{{ error.messageKey|trans(error.messageData, 'security') }}</strong>
                 </div>
-            {% endif %}
-            <div class="container">
-                <form class="form-signin" action="{{ path('login') }}" method="post">
-                    <h2 class="form-signin-heading">{{ 'common.please_sign_in'|trans }}</h2>
-                    <label for="email" class="sr-only">{{ 'common.email'|trans }}</label>
-                    <input type="email" id="email" name="email" value="{{ last_username }}" class="form-control" placeholder="{{ 'common.email'|trans }}" required autofocus />
-
-                    <label for="password" class="sr-only">{{ 'common.password'|trans }}</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="{{ 'common.password'|trans }}" required />
-
-                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_in'|trans }}</button>
-                </form>
             </div>
-            <a href="{{ path('registration') }}" class="text-center new-account">{{ 'common.create_account'|trans }}</a>
-        </div>
+        {% endif %}
+        <form class="form-signin span3 well" action="{{ path('login') }}" method="post">
+            <label for="email" class="sr-only">{{ 'common.email'|trans }}</label>
+            <input type="email" id="email" name="email" value="{{ last_username }}" class="form-control" placeholder="{{ 'common.email'|trans }}" required autofocus/>
+
+            <label for="password" class="sr-only">{{ 'common.password'|trans }}</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="{{ 'common.password'|trans }}" required/>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_in'|trans }}</button>
+        </form>
+    </div>
+    <div>
+        <p class="text-center new-account">{{ 'common.not_registered_yet'|trans }}
+            <a href="{{ path('registration') }}">{{ 'common.create_account'|trans }}</a>.
+        </p>
+    </div>
     </body>
 {% endblock %}
 
