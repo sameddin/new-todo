@@ -20,12 +20,14 @@ class UserType extends AbstractType
                     'placeholder' => 'common.username',
                     'autofocus' => true,
                 ],
+                'required' => true,
             ])
             ->add('email', EmailType::class, [
                 'label' => 'common.email',
                 'attr' => [
                     'placeholder' => 'common.email',
                 ],
+                'required' => true,
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,

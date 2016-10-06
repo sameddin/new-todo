@@ -12,32 +12,32 @@
 {% endblock %}
 
 {% block content %}
-    <body class="sign-in">
+    <body class="sign-up">
         <div class="container">
-
-            <ol class="breadcrumb">
-                <li><a href="{{ path('homepage') }}">{{ 'common.project_name'|trans }}</a></li>
-                <li class="active">Registration</li>
-            </ol>
-
+            <div class="row">
+                <div class="center-block">
+                    <a href="{{ path('homepage') }}">
+                        <img class="profile-img" src="{{ asset('favicon/favicon-96x96.png') }}">
+                    </a>
+                </div>
+            </div>
             {{ form_start(form) }}
-                <div class="form-signin">
-                    {{ form_errors(form.nickName) }}
-                    {{ form_errors(form.email) }}
-                    {{ form_errors(form.plainPassword.first) }}
-                    {{ form_errors(form.plainPassword.second) }}
-                </div>
-                <div class="form-signin">
-                    {{ form_widget(form.nickName) }}
-                    {{ form_widget(form.email) }}
-                    {{ form_widget(form.plainPassword.first) }}
-                    {{ form_widget(form.plainPassword.second) }}
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_up'|trans }}</button>
-                </div>
-                <div>
-                    <p class="text-center new-account">{{ 'common.already_have_an_account'|trans }} <a href="{{ path('login') }}">{{ 'common.sign_in'|trans }}</a>.</p>
-                </div>
+            <div class="form-signup span3 well">
+                {{ form_errors(form.nickName) }}
+                {{ form_errors(form.email) }}
+                {{ form_errors(form.plainPassword.first) }}
+                {{ form_errors(form.plainPassword.second) }}
+                {{ form_widget(form.nickName) }}
+                {{ form_widget(form.email) }}
+                {{ form_widget(form.plainPassword.first) }}
+                {{ form_widget(form.plainPassword.second) }}
+                <br>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_up'|trans }}</button>
+            </div>
             {{ form_end(form) }}
+            <div>
+                <p class="text-center new-account">{{ 'common.already_have_an_account'|trans }} <a href="{{ path('login') }}">{{ 'common.sign_in'|trans }}</a>.</p>
+            </div>
         </div>
     </body>
 {% endblock %}
