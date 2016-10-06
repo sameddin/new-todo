@@ -1,0 +1,40 @@
+{% block stylesheets %}
+    {% stylesheets '@css' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    <script src="https://use.fontawesome.com/1fd1821b57.js"></script>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts '@js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+    <body class="sign-in">
+        <div class="container">
+
+            <ol class="breadcrumb">
+                <li><a href="{{ path('homepage') }}">{{ 'common.project_name'|trans }}</a></li>
+                <li class="active">Registration</li>
+            </ol>
+
+            {{ form_start(form) }}
+                <div class="form-signin">
+                    {{ form_errors(form.nickName) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_errors(form.plainPassword.first) }}
+                    {{ form_errors(form.plainPassword.second) }}
+                </div>
+                <div class="form-signin">
+                    {{ form_widget(form.nickName) }}
+                    {{ form_widget(form.email) }}
+                    {{ form_widget(form.plainPassword.first) }}
+                    {{ form_widget(form.plainPassword.second) }}
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'common.sign_up'|trans }}</button>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </body>
+{% endblock %}

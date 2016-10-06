@@ -24,5 +24,7 @@ common.jumbotron_text_five: This is an example form of Task edition.
 common.jumbotron_text_six: In this form you can edit task or leave it as it is.
 common.email: Email
 common.password: Password
+common.password_repeat: Repeat Password
 common.please_sign_in: Please sign in
 common.create_account: Create an account
+common.username: Username

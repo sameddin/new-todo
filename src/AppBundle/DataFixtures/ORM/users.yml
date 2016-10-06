@@ -2,8 +2,4 @@ AppBundle\Entity\User:
     user1:
         nickName: sameddin
         email: sameddin.pasizade@gmail.com
-        password: password
-    user{2..20}:
-        nickName: <userName()>
-        email: <email()>
-        password: <password()>
+        password: $2a$04$R4twxIqloyNSLa1RV2.Pl.Dw2Tkqs2lRdR/Rg5ug4ucBbKzIkZnEm
