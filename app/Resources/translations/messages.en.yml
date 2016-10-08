@@ -30,3 +30,6 @@ common.username: Username
 common.already_have_an_account: Already have an account?
 common.sign_in_new_todo: Sign in to New ToDo
 common.not_registered_yet: Not registered yet?
+common.signed_in_as: Signed in as
+common.your_profile: Your profile
+common.settings: Settings
