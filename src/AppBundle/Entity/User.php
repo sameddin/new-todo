@@ -15,8 +15,8 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 /**
  * @Entity()
  * @Table(name="`user`")
- * @UniqueEntity(fields="email", message="Email already taken")
- * @UniqueEntity(fields="nickName", message="Nickname already taken")
+ * @UniqueEntity(fields="email", message="email.not_free")
+ * @UniqueEntity(fields="nickName", message="username.not_free")
  */
 class User implements UserInterface
 {
