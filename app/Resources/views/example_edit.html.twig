@@ -4,9 +4,18 @@
         <div class="container">
             <h2>{{ 'common.jumbotron_text_five'|trans }}</h2>
             <p>{{ 'common.jumbotron_text_six'|trans }}<br>
-                {{ 'common.jumbotron_text_two'|trans }}
+                {% if not is_granted(expression('is_authenticated()')) %}
+                    {{ 'common.jumbotron_text_two'|trans }}
+                {% endif %}
             </p>
-            <p><a class="btn btn-primary btn-lg" href="{{ path('registration') }}" role="button">{{ 'common.sign_up'|trans }} <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a></p>
+            <p>
+                {% if not is_granted(expression('is_authenticated()')) %}
+                    <a class="btn btn-primary btn-lg" href="{{ path('registration') }}"
+                       role="button">{{ 'common.sign_up'|trans }}
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>
+                {% endif %}
+            </p>
         </div>
     </div>
 
