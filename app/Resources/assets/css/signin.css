@@ -11,11 +11,11 @@ body.sign-in {
 }
 
 .form-signin .form-signin-heading,
-.form-signin .checkbox {
+.form-signin {
     margin-bottom: 10px;
 }
 
-.form-signin .checkbox {
+.form-signin {
     font-weight: normal;
 }
 
