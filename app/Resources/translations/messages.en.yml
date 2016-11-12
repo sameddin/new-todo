@@ -3,6 +3,7 @@ common.project_name: New ToDo
 common.sign_in: Sign in
 common.sign_out: Sign out
 common.sign_up: Sign up
+common.sign_up_in_seconds: Sign up in seconds
 common.created_designed: Created & Designed by
 common.hello_world: Hello, world!
 common.jumbotron_text_one: This is awesome New ToDo list.
