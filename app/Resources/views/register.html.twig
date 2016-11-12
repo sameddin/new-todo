@@ -38,7 +38,10 @@
             </div>
             {{ form_end(form) }}
             <div>
-                <p class="form-signin well text-center">{{ 'common.already_have_an_account'|trans }} <a href="{{ path('login') }}">{{ 'common.sign_in'|trans }}</a>.</p>
+                <p class="form-signin well text-center">
+                    {{ 'common.already_have_an_account'|trans }}
+                    <a href="{{ path('login') }}">{{ 'common.sign_in'|trans }}</a>.
+                </p>
             </div>
         </div>
     </body>
