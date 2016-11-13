@@ -40,8 +40,10 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="text-center">
-                                    {{ 'common.signed_in_as'|trans }} <strong>{{ app.user.nickName }}</strong>
+                                <li class="dropdown-header">
+                                    <span class="dropdown-menu-homepage">
+                                        {{ 'common.signed_in_as'|trans }} <strong>{{ app.user.nickName }}</strong>
+                                    </span>
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li><a class="dropdown" href="#">{{ 'common.your_profile'|trans }}</a></li>
