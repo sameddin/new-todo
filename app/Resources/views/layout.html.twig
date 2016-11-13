@@ -46,7 +46,7 @@
                                     </span>
                                 </li>
                                 <li role="separator" class="divider"></li>
-                                <li><a class="dropdown" href="#">{{ 'common.your_profile'|trans }}</a></li>
+                                <li><a class="dropdown" href="{{ path('user_profile', {id: app.user.id }) }}">{{ 'common.your_profile'|trans }}</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a class="dropdown" href="#">{{ 'common.settings'|trans }}</a></li>
                                 <li>

@@ -54,6 +54,7 @@ assetic:
                 - "%kernel.root_dir%/../app/Resources/assets/css/signin.css"
                 - "%kernel.root_dir%/../app/Resources/assets/css/signup.css"
                 - "%kernel.root_dir%/../app/Resources/assets/css/dropdown-menu-homepage.css"
+                - "%kernel.root_dir%/../app/Resources/assets/css/user_profile.css"
         js:
             inputs:
                 - "%kernel.root_dir%/../bower_components/jquery/dist/jquery.min.js"
